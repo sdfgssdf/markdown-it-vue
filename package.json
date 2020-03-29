@@ -1,5 +1,5 @@
 {
-  "name": "markdown-it-vue",
+  "name": "markdown-it-vue-ssr",
   "version": "1.0.11",
   "private": false,
   "description": "The vue lib for markdown-it",

@@ -1,6 +1,6 @@
 import MarkdownItVue from './markdown-it-vue'
 
-const install = function (Vue) {
+const install = function(Vue) {
   Vue.component(MarkdownItVue.name, MarkdownItVue)
 }
 
