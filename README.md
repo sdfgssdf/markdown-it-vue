@@ -123,8 +123,8 @@ this.$refs.myMarkdownItVue.use(MyMarkdownItPlugin)
 </template>
 
 <script>
-import MarkdownItVue from 'markdown-it-vue'
-import 'markdown-it-vue/dist/markdown-it-vue.css'
+import MarkdownItVue from 'markdown-it-vue-ssr'
+import 'markdown-it-vue/dist/markdown-it-vue-ssr.css'
 export default {
   components: {
     MarkdownItVue
