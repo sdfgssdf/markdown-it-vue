@@ -1,18 +1,19 @@
 {
   "name": "markdown-it-vue-ssr",
-  "version": "1.0.11",
+  "version": "1.0.0",
   "private": false,
   "description": "The vue lib for markdown-it",
   "author": {
-    "name": "ravenq",
-    "e-mail": "flw_dream@126.com"
+    "name": "sdfgssdf",
+    "e-mail": "1119678360@qq.com.com"
   },
   "keywords": [
     "markdown",
     "markdown-it",
     "markdown-it-plugin",
     "vue",
-    "markdown-it-vue"
+    "markdown-it-vue",
+    "ssr"
   ],
   "files": [
     "dist",
@@ -24,9 +25,10 @@
     "build": "npm run build:lib && npm run build:example",
     "lint": "vue-cli-service lint",
     "build:example": "node --max_old_space_size=8192 node_modules/@vue/cli-service/bin/vue-cli-service.js build --dest example/dist ./example/main.js",
-    "build:lib": "node --max_old_space_size=8192 node_modules/@vue/cli-service/bin/vue-cli-service.js build --target lib ./src/index.js"
+    "build:lib": "node --max_old_space_size=8192 node_modules/@vue/cli-service/bin/vue-cli-service.js build --target lib ./src/index.js",
+    "prepublish": "npm run lint && npm run build"
   },
-  "main": "dist/markdown-it-vue.umd.min.js",
+  "main": "dist/markdown-it-vue-ssr.umd.min.js",
   "dependencies": {
     "github-markdown-css": "^3.0.1",
     "highlight.js": "^9.16.2",
@@ -86,10 +88,10 @@
   "bugs": {
     "url": "https://github.com/ravenq/markdown-it-vueissues"
   },
-  "homepage": "https://github.com/ravenq/markdown-it-vue",
+  "homepage": "https://github.com/sdfgssdf/markdown-it-vue",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ravenq/markdown-it-vue.git"
+    "url": "git+https://github.com/sdfgssdf/markdown-it-vue.git"
   }
 }
