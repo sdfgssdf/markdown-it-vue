@@ -28,8 +28,6 @@
   },
   "main": "dist/markdown-it-vue.umd.min.js",
   "dependencies": {
-    "echarts": "^4.5.0",
-    "flowchart.js": "^1.13.0",
     "github-markdown-css": "^3.0.1",
     "highlight.js": "^9.16.2",
     "markdown-it": "^10.0.0",
@@ -49,7 +47,6 @@
     "markdown-it-sup": "^1.0.0",
     "markdown-it-task-lists": "^2.1.1",
     "markdown-it-toc-and-anchor": "^4.1.2",
-    "mermaid": "^8.4.3",
     "vue": "^2.6.6"
   },
   "devDependencies": {
