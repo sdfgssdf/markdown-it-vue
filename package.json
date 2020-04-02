@@ -1,6 +1,6 @@
 {
-  "name": "markdown-it-vue-ssr",
-  "version": "1.0.1",
+  "name": "markdown-it-vue-simplify",
+  "version": "1.0.0",
   "private": false,
   "description": "The vue lib for markdown-it",
   "author": {
@@ -12,8 +12,7 @@
     "markdown-it",
     "markdown-it-plugin",
     "vue",
-    "markdown-it-vue",
-    "ssr"
+    "markdown-it-vue"
   ],
   "files": [
     "dist",
@@ -38,11 +37,7 @@
     "markdown-it-deflist": "^2.0.3",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-footnote": "^3.0.1",
-    "markdown-it-github-toc": "^3.2.4",
-    "markdown-it-icons": "^0.4.1",
     "markdown-it-ins": "^3.0.0",
-    "markdown-it-katex": "^2.0.3",
-    "markdown-it-latex": "^0.2.0",
     "markdown-it-mark": "^3.0.0",
     "markdown-it-source-map": "^0.1.1",
     "markdown-it-sub": "^1.0.0",
@@ -59,7 +54,8 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^5.0.0",
     "vue-cli-plugin-component-lib": "^0.1.6",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "webpack-bundle-analyzer": "^3.6.1"
   },
   "eslintConfig": {
     "root": true,

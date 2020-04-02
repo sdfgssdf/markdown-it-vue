@@ -12,18 +12,12 @@ import MarkdownItDeflist from 'markdown-it-deflist'
 import MarkdownItAbbreviation from 'markdown-it-abbr'
 import MarkdownItInsert from 'markdown-it-ins'
 import MarkdownItMark from 'markdown-it-mark'
-import MarkdownItKatex from 'markdown-it-katex'
 import MarkdownItTasklists from 'markdown-it-task-lists'
-import MarkdownItIcons from 'markdown-it-icons'
-import MarkdownItLatex from 'markdown-it-latex'
 import MarkdownItContainer from 'markdown-it-container'
-import MarkdownItGithubToc from 'markdown-it-github-toc'
 import MarkdownItSourceMap from 'markdown-it-source-map'
 import MarkdownItLinkAttributes from './markdown-it-link-attributes'
 import MarkdownItHighlight from './markdown-it-highlight'
 import 'github-markdown-css'
-import 'markdown-it-latex/dist/index.css'
-import 'markdown-it-icons/dist/index.css'
 
 const DEFAULT_OPTIONS_LINK_ATTRIBUTES = {
   attrs: {
@@ -74,29 +68,6 @@ export default {
           this.$refs['markdown-it-vue-container'].innerHTML = this.md.render(
             val
           )
-          // render echarts
-          // document.querySelectorAll('.md-echarts').forEach(element => {
-          //   try {
-          //     let options = JSON.parse(element.textContent)
-          //     let chart = echarts.init(element)
-          //     chart.setOption(options)
-          //   } catch (e) {
-          //     element.outerHTML = `<pre>echarts complains: ${e}</pre>`
-          //   }
-          // })
-          // render mermaid
-          // mermaid.init(undefined, document.querySelectorAll('.mermaid'))
-          // render flowchart
-          // document.querySelectorAll('.md-flowchart').forEach(element => {
-          //   try {
-          //     let code = element.textContent
-          //     let chart = flowchart.parse(code)
-          //     element.textContent = ''
-          //     chart.drawSVG(element)
-          //   } catch (e) {
-          //     element.outerHTML = `<pre>flowchart complains: ${e}</pre>`
-          //   }
-          // })
         })
       }
     }
@@ -105,10 +76,7 @@ export default {
     const optMarkdownIt = this.options.markdownIt
     const linkAttributes =
       this.options.linkAttributes || DEFAULT_OPTIONS_LINK_ATTRIBUTES
-    const optKatex = this.options.katex || DEFAULT_OPTIONS_KATEX
     const optTasklists = this.options.tasklists || DEFAULT_OPTIONS_TASKLISTS
-    const optIcons = this.options.icons || DEFAULT_OPTIONS_ICONS
-    const optGithubToc = this.options.githubToc || DEFAULT_OPTIONS_GITHUBTOC
 
     let md = new MarkdownIt(optMarkdownIt)
       .use(MarkdownItEmoji)
@@ -120,13 +88,9 @@ export default {
       .use(MarkdownItInsert)
       .use(MarkdownItMark)
       .use(MarkdownItHighlight)
-      .use(MarkdownItLatex)
       .use(MarkdownItSourceMap)
       .use(MarkdownItLinkAttributes, linkAttributes)
-      .use(MarkdownItKatex, optKatex)
       .use(MarkdownItTasklists, optTasklists)
-      .use(MarkdownItIcons, optIcons)
-      .use(MarkdownItGithubToc, optGithubToc)
       .use(MarkdownItContainer, 'warning', {
         validate: function(params) {
           return params.trim() === 'warning'
